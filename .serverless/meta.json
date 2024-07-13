@@ -1,0 +1,83 @@
+{
+  "C:\\projects\\study\\next\\poc-next": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.12",
+    "isWithinCompose": false,
+    "isCompose": false,
+    "composeOrgName": null,
+    "composeResolverProviders": {},
+    "composeServiceName": null,
+    "servicePath": "C:\\projects\\study\\next\\poc-next",
+    "serviceConfigFileName": "serverless.yml",
+    "service": {
+      "org": "devjonathan",
+      "app": "poc-next",
+      "myNextApplication": {
+        "componente": "@sls-next/serverless-component"
+      },
+      "provider": {
+        "name": "aws",
+        "stage": "dev"
+      }
+    },
+    "serviceRawFile": "# \"org\" ensures this Service is used with the correct Serverless Framework Access Key.\norg: devjonathan\n# \"app\" enables Serverless Framework Dashboard features and sharing them with other Services.\napp: poc-next\n\nmyNextApplication: \n  componente:  \"@sls-next/serverless-component\"",
+    "command": [
+      "deploy"
+    ],
+    "options": {},
+    "error": {
+      "message": "\"service\" property is missing in serverless.yml",
+      "stack": "ServerlessError2: \"service\" property is missing in serverless.yml\n    at Service.loadServiceFileParam (file:///C:/Users/JonathanOliveira/.serverless/releases/4.1.12/package/dist/sf-core.js:855:9430)\n    at Service.load (file:///C:/Users/JonathanOliveira/.serverless/releases/4.1.12/package/dist/sf-core.js:855:6963)\n    at Serverless.init (file:///C:/Users/JonathanOliveira/.serverless/releases/4.1.12/package/dist/sf-core.js:861:9726)\n    at runFramework (file:///C:/Users/JonathanOliveira/.serverless/releases/4.1.12/package/dist/sf-core.js:909:897)\n    at async route (file:///C:/Users/JonathanOliveira/.serverless/releases/4.1.12/package/dist/sf-core.js:920:16046)\n    at async Object.run2 [as run] (file:///C:/Users/JonathanOliveira/.serverless/releases/4.1.12/package/dist/sf-core.js:920:16444)\n    at async run3 (file:///C:/Users/JonathanOliveira/.serverless/releases/4.1.12/package/dist/sf-core.js:920:17704)",
+      "code": "SERVICE_NAME_MISSING"
+    },
+    "params": {},
+    "machineId": "86af63163b1248f1f326c8f23ac71589",
+    "accessKeyV2": "<REDACTED>",
+    "accessKeyV1": "<REDACTED>",
+    "orgId": "97520d1b-ea1d-43f1-bd86-357311c8a4fb",
+    "orgName": "devjonathan",
+    "userId": "T0YFnRC7y5JK6gKYxF",
+    "dashboard": {
+      "isEnabledForService": false,
+      "requiredAuthentication": false,
+      "orgFeaturesInUse": null,
+      "orgObservabilityIntegrations": null,
+      "serviceAppId": null,
+      "serviceProvider": null,
+      "instanceParameters": null
+    },
+    "userName": "devjonathan",
+    "subscription": null,
+    "userEmail": "jojortd0@gmail.com",
+    "serviceProviderAwsCredentials": "<REDACTED>",
+    "serviceProviderAwsAccountId": "817623921572",
+    "versionSf": "4.1.12",
+    "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:817623921572:stack/poc-next-app-fullstack-dev/447e0f40-4161-11ef-8932-12c4bf9bab3f",
+    "serviceProviderAwsCfStackCreated": "2024-07-13T21:45:48.912Z",
+    "serviceProviderAwsCfStackUpdated": "2024-07-13T21:46:17.590Z",
+    "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
+    "serviceProviderAwsCfStackOutputs": [
+      {
+        "OutputKey": "ServerlessDeploymentBucketName",
+        "OutputValue": "poc-next-app-fullstack-de-serverlessdeploymentbuck-3q2a6di0pa0l",
+        "ExportName": "sls-poc-next-app-fullstack-dev-ServerlessDeploymentBucketName"
+      }
+    ]
+  },
+  "unknown": {
+    "versionSfCore": null,
+    "versionFramework": "4.1.12",
+    "isWithinCompose": false,
+    "composeOrgName": null,
+    "composeServiceName": null,
+    "command": [],
+    "options": {},
+    "error": null,
+    "machineId": "86af63163b1248f1f326c8f23ac71589",
+    "serviceProviderAwsCfStackId": null,
+    "serviceProviderAwsCfStackCreated": null,
+    "serviceProviderAwsCfStackUpdated": null,
+    "serviceProviderAwsCfStackStatus": null,
+    "serviceProviderAwsCfStackOutputs": null
+  }
+}
