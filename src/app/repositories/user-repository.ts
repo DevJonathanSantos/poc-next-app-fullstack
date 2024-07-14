@@ -12,6 +12,17 @@ export class UserRepository implements IUserRepository {
     private tableName: string
 
     constructor() {
+        console.log(
+            'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX1',
+            JSON.stringify({
+                region: process.env.REGION as string,
+                credentials: {
+                    accessKeyId: process.env.ACCESS_KEY as string,
+                    secretAccessKey: process.env.SECRET_ACCESS_KEY as string
+                }
+            })
+        )
+        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2', process.env.DATABASE_NAME)
         this.client = new DynamoDBClient({
             region: process.env.REGION as string,
             credentials: {
