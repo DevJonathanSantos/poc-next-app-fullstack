@@ -12,17 +12,6 @@ export class UserRepository implements IUserRepository {
     private tableName: string
 
     constructor() {
-        console.log(
-            'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX1',
-            JSON.stringify({
-                region: process.env.REGION as string,
-                credentials: {
-                    accessKeyId: process.env.ACCESS_KEY as string,
-                    secretAccessKey: process.env.SECRET_ACCESS_KEY as string
-                }
-            })
-        )
-        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX2', process.env.DATABASE_NAME)
         this.client = new DynamoDBClient({
             region: process.env.REGION as string,
             credentials: {
@@ -68,8 +57,6 @@ export class UserRepository implements IUserRepository {
 
                 const { Items, LastEvaluatedKey } = await this.client.send(query)
 
-                console.log(Items)
-
                 lastKey = LastEvaluatedKey
 
                 const items = Items?.map(item => User.fromDynamoItem(item))
@@ -95,8 +82,6 @@ export class UserRepository implements IUserRepository {
             const { Item } = await this.client.send(command)
 
             if (!Item) return
-
-            console.log('FFFFFFFFFFFFFFFFFF', Item)
 
             return User.fromDynamoItem(Item)
         } catch (error) {

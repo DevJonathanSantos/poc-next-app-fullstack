@@ -9,8 +9,6 @@ export class GetUserUseCase {
 
         const user = await this.userRepository.get(pk, sk)
 
-        console.log('FFFFFFFFFFFFFFFFFF', user)
-
         return user?.data
     }
 }
