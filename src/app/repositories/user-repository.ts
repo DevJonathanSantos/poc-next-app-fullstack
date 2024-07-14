@@ -13,10 +13,10 @@ export class UserRepository implements IUserRepository {
 
     constructor() {
         this.client = new DynamoDBClient({
-            region: process.env.AWS_REGION as string,
+            region: process.env.REGION as string,
             credentials: {
-                accessKeyId: process.env.AWS_ACCESS_KEY as string,
-                secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string
+                accessKeyId: process.env.ACCESS_KEY as string,
+                secretAccessKey: process.env.SECRET_ACCESS_KEY as string
             }
         })
         this.tableName = process.env.DATABASE_NAME as string
