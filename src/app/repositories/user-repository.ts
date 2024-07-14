@@ -72,7 +72,7 @@ export class UserRepository implements IUserRepository {
 
                 lastKey = LastEvaluatedKey
 
-                const items = Items?.map((item) => User.fromDynamoItem(item))
+                const items = Items?.map(item => User.fromDynamoItem(item))
 
                 if (items) result = result.concat(items)
             } while (lastKey)
